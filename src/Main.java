@@ -6,16 +6,12 @@ public class Main {
         double rate = 9.99;
         double monthRate = rate / 12 / 100;
         double monthTerm = 12;
-        double monthTerm2 = 24;
-        double monthTerm3 = 36;
+        // double monthTerm = 24; данные для 2х лет кредита
+        //double monthTerm = 32; данные для 3х лет кредита
+        double annuity = service.calculate(creditSumm, rate, monthTerm, monthRate);
 
 
-        double annuity = service.calculate(creditSumm, rate, monthTerm, monthRate, monthTerm2, monthTerm3);
-        //double annuity2 = service.calculate(creditSumm, rate, monthTerm, monthRate, monthTerm2, monthTerm3);
-        //double annuity3 = service.calculate(creditSumm, rate, monthTerm2, monthRate, monthTerm, monthTerm3);
-
-
-        System.out.printf("%.0f",annuity);
+        System.out.printf("%.0f", annuity);
 
 
     }
